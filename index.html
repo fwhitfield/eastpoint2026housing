@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>City of East Point — 2026 Housing Plan</title>
+  <meta name="description" content="East Point’s 2026 Housing Plan: stability, affordability, and prevention across five focus areas: homeownership, preservation, affordable development, policy, and homelessness prevention alignment." />
+  <meta name="keywords" content="East Point housing plan, homeownership East Point, home repair assistance East Point, affordable housing East Point, LIHTC East Point, housing policy East Point" />
+  <style>
+    :root{
+      --bg:#fbfbf9;
+      --ink:#121313;
+      --muted:#4a4f52;
+      --card:#ffffff;
+      --line:#e6e7e3;
+      --accent:#1e4d3a;
+      --accent2:#2b2f31;
+      --tag:#eef3f0;
+      --shadow: 0 10px 24px rgba(0,0,0,.06);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:linear-gradient(180deg, #f6f7f4 0%, var(--bg) 38%, var(--bg) 100%);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:20;
+      background:rgba(251,251,249,.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px;
+      max-width:var(--max); margin:0 auto; padding:14px 24px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:750; letter-spacing:.2px}
+    .seal{
+      width:34px;height:34px;border-radius:10px;
+      background: conic-gradient(from 180deg, var(--accent), #2f6a52, var(--accent2));
+      box-shadow: 0 8px 18px rgba(30,77,58,.18);
+    }
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{
+      text-decoration:none; color:var(--muted);
+      padding:8px 10px; border-radius:12px;
+    }
+    .links a:hover{background:#f0f1ed; color:var(--ink)}
+    .hero{
+      padding:46px 0 18px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:start;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .links{display:none}
+    }
+    h1{margin:0 0 10px; font-size:42px; line-height:1.08}
+    .sub{color:var(--muted); font-size:16px; line-height:1.5; margin:0 0 18px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      background:var(--tag); border:1px solid #dfe7e3;
+      color:var(--accent);
+      padding:7px 10px; border-radius:999px;
+      font-weight:650; font-size:13px;
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius:14px; padding:12px 14px;
+      border:1px solid var(--line);
+      background:var(--card);
+      text-decoration:none;
+      box-shadow: 0 4px 12px rgba(0,0,0,.04);
+      font-weight:650;
+    }
+    .btn.primary{
+      background:var(--accent);
+      border-color: transparent;
+      color:white;
+      box-shadow: 0 10px 20px rgba(30,77,58,.22);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .kdates{display:grid; gap:10px}
+    .kdates .row{
+      display:flex; justify-content:space-between; gap:12px;
+      padding:10px 12px;
+      border-radius:14px;
+      background:#f6f7f4;
+      border:1px solid var(--line);
+      font-size:14px;
+      color:var(--muted);
+    }
+    .kdates b{color:var(--ink)}
+    section{padding:22px 0}
+    h2{margin:0 0 10px; font-size:26px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .focus{
+      display:flex; flex-direction:column; gap:10px;
+      min-height: 210px;
+    }
+    .icon{
+      width:40px;height:40px;border-radius:14px;
+      display:grid; place-items:center;
+      background:#eef3f0;
+      border:1px solid #dfe7e3;
+      color:var(--accent);
+      font-weight:800;
+    }
+    .focus h3{margin:0; font-size:18px}
+    .focus p{margin:0; color:var(--muted); line-height:1.55}
+    .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:auto}
+    .tag{
+      font-size:12px; font-weight:650; color:var(--accent2);
+      padding:6px 9px; border-radius:999px;
+      background:#f3f4f1; border:1px solid var(--line);
+    }
+    .twoCol{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media (max-width: 900px){ .twoCol{grid-template-columns:1fr} }
+    .muted{color:var(--muted)}
+    .small{font-size:13px; line-height:1.5}
+    .calendar{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px}
+    @media (max-width: 900px){ .calendar{grid-template-columns:1fr} }
+    .month h4{margin:0 0 10px; font-size:16px}
+    .item{padding:10px 12px; border-radius:14px; border:1px solid var(--line); background:#f6f7f4; margin:8px 0}
+    .item b{display:block}
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 40px;
+      color:var(--muted);
+    }
+    .footgrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media (max-width: 900px){ .footgrid{grid-template-columns:1fr} }
+    .note{background:#f6f7f4;border:1px solid var(--line); border-radius:14px; padding:12px}
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="seal" aria-hidden="true"></div>
+      <div>East Point — 2026 Housing Plan</div>
+    </div>
+    <nav class="links" aria-label="Primary">
+      <a href="#plan">The Plan</a>
+      <a href="#focus">Five Focus Areas</a>
+      <a href="#calendar">Workplan</a>
+      <a href="#forms">Get Help</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <div class="pill">Stability • Affordability • Prevention</div>
+      <h1>2026 Housing Plan</h1>
+      <p class="sub">
+        A practical, execution-focused plan led by the Office of Equity, Inclusion &amp; Empowerment (OEIE)
+        to expand homeownership, preserve existing homes, grow the affordable housing pipeline, strengthen housing policy,
+        and align housing work with homelessness prevention.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#forms">Get Homebuyer / Repair Help</a>
+        <a class="btn" href="#calendar">View 2026 Workplan</a>
+        <a class="btn" href="#plan">Read the Executive Summary</a>
+      </div>
+
+      <p class="small muted" style="margin-top:14px;">
+        This page is a public-facing summary. Documents and forms can be linked as they are finalized.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 10px;">Key dates</h2>
+      <div class="kdates" aria-label="Key dates">
+        <div class="row"><span><b>Jan 22</b> — Point-in-Time (PIT) Count</span><span>2026</span></div>
+        <div class="row"><span><b>Jan 30</b> — Empowered by Getting Ahead Gala</span><span>2026</span></div>
+        <div class="row"><span><b>Jan 31</b> — CHIP Grant Submission Deadline</span><span>11:59pm</span></div>
+        <div class="row"><span><b>Mar 27</b> — GICH Alumni Status Due</span><span>2026</span></div>
+      </div>
+      <div class="note small" style="margin-top:12px;">
+        <b>Downloads (placeholders):</b><br/>
+        Full 2026 Plan (PDF) • Workplan Calendar (PDF) • Council Brief (PDF)
+      </div>
+    </div>
+  </div>
+
+  <section id="plan">
+    <h2>The Plan (Executive Summary)</h2>
+    <div class="twoCol">
+      <div class="card">
+        <p class="muted" style="margin:0 0 8px;"><b>Purpose.</b> The 2026 Housing Plan focuses City capacity on five priorities that move residents from vulnerability to stability while laying the groundwork for long-term affordability.</p>
+        <p class="muted" style="margin:0;"><b>How we’ll deliver.</b> A disciplined annual calendar, clear governance through GICH, quarterly Council updates, and a living data dashboard—sequenced to protect staff capacity while maintaining momentum.</p>
+      </div>
+      <div class="card">
+        <p class="muted" style="margin:0;"><b>Outcome.</b> By the end of 2026: more residents prepared to buy homes, more homes preserved, a stronger affordable housing pipeline, policy tools to safeguard affordability, and tighter internal alignment between housing and homelessness prevention—reducing the number of households that fall into crisis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus">
+    <h2>Five Focus Areas</h2>
+    <div class="grid">
+      <div class="card focus">
+        <div class="icon">1</div>
+        <h3>Homeownership</h3>
+        <p>Expand readiness and incentives so East Point residents can buy homes in East Point—supported by a Down Payment Assistance Fund.</p>
+        <div class="tags">
+          <span class="tag">Workshops</span><span class="tag">Readiness</span><span class="tag">DPA Fund</span>
+        </div>
+      </div>
+
+      <div class="card focus">
+        <div class="icon">2</div>
+        <h3>Home Preservation</h3>
+        <p>Complete Phase 2 of home repair, win the CHIP grant, secure July 1 fiscal-cycle funding, and expand preservation dollars citywide.</p>
+        <div class="tags">
+          <span class="tag">NCMHR Phase 2</span><span class="tag">CHIP</span><span class="tag">House Proud</span>
+        </div>
+      </div>
+
+      <div class="card focus">
+        <div class="icon">3</div>
+        <h3>Affordable Housing Development</h3>
+        <p>Facilitate a competitive LIHTC process and activate dormant sites for affordable single-family and multifamily housing.</p>
+        <div class="tags">
+          <span class="tag">LIHTC</span><span class="tag">Pipeline</span><span class="tag">Oliver Arms</span>
+        </div>
+      </div>
+
+      <div class="card focus">
+        <div class="icon">4</div>
+        <h3>Housing Policy Development</h3>
+        <p>Complete a housing inventory study and design tools to reduce speculative pressure, including enforceable ownership limits.</p>
+        <div class="tags">
+          <span class="tag">Inventory Study</span><span class="tag">Enforcement</span><span class="tag">Affordability</span>
+        </div>
+      </div>
+
+      <div class="card focus">
+        <div class="icon">5</div>
+        <h3>OEIE Alignment &amp; Homelessness Prevention</h3>
+        <p>Coordinate internally so housing production, preservation, and policy reduce housing insecurity and prevent homelessness.</p>
+        <div class="tags">
+          <span class="tag">Coordination</span><span class="tag">Prevention</span><span class="tag">Data Sharing</span>
+        </div>
+      </div>
+
+      <div class="card focus">
+        <div class="icon">✓</div>
+        <h3>Get Help / Get Involved</h3>
+        <p>Replace these buttons with your official intake links (Google Forms, Jotform, city pages, etc.).</p>
+        <div class="ctaRow">
+          <a class="btn primary" href="#" onclick="alert('Replace this with your official workshop signup link.'); return false;">Workshop Signup</a>
+          <a class="btn" href="#" onclick="alert('Replace this with your official home repair intake link.'); return false;">Home Repair Intake</a>
+          <a class="btn" href="#" onclick="alert('Replace this with your developer interest link.'); return false;">Developer Interest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <h2>2026 Workplan Snapshot</h2>
+    <p class="muted small">A simplified month-by-month view. Your internal calendar can remain more detailed and tagged.</p>
+    <div class="calendar">
+      <div class="card month">
+        <h4>January</h4>
+        <div class="item"><b>Jan 22 — PIT Count</b><span class="small muted">Data alignment & reporting readiness</span></div>
+        <div class="item"><b>Jan 30 — Empowered by Getting Ahead Gala</b><span class="small muted">Visibility + fundraising</span></div>
+        <div class="item"><b>Jan 31 — CHIP submission</b><span class="small muted">Application packaging + final submit</span></div>
+      </div>
+      <div class="card month">
+        <h4>February</h4>
+        <div class="item"><b>GICH criteria & process session</b><span class="small muted">Align with housing study priorities</span></div>
+        <div class="item"><b>Workshop #1: Credit + Budget baseline</b><span class="small muted">Soft pull option; set goals</span></div>
+      </div>
+      <div class="card month">
+        <h4>March</h4>
+        <div class="item"><b>Developer presentations</b><span class="small muted">Competitive timing</span></div>
+        <div class="item"><b>Mar 27 — GICH Alumni status due</b><span class="small muted">Submission</span></div>
+      </div>
+      <div class="card month">
+        <h4>May</h4>
+        <div class="item"><b>1981 Housing Tour</b><span class="small muted">Combine with GICH meeting</span></div>
+        <div class="item"><b>Workshop #2: On the Block</b><span class="small muted">Public-facing + gamification</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="forms">
+    <h2>Forms & Contact (placeholders)</h2>
+    <div class="twoCol">
+      <div class="card">
+        <h3 style="margin:0 0 10px;">Workshop & Homebuyer Help</h3>
+        <p class="muted small">Replace with your official signup / counseling links.</p>
+        <a class="btn primary" href="#" onclick="alert('Replace this with your official workshop signup link.'); return false;">Workshop Signup Link</a>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 10px;">Home Repair / Preservation Help</h3>
+        <p class="muted small">Replace with your official intake link and eligibility info.</p>
+        <a class="btn primary" href="#" onclick="alert('Replace this with your official home repair intake link.'); return false;">Home Repair Intake Link</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact OEIE</h2>
+    <div class="twoCol">
+      <div class="card">
+        <p class="muted" style="margin:0 0 10px;"><b>Office of Equity, Inclusion &amp; Empowerment</b></p>
+        <p class="muted small" style="margin:0 0 10px;">Replace placeholders with official City contact information.</p>
+        <div class="note small">
+          <b>Email:</b> (replace)<br/>
+          <b>Phone:</b> (replace)<br/>
+          <b>Office hours:</b> (replace)
+        </div>
+      </div>
+      <div class="card">
+        <p class="muted" style="margin:0 0 10px;"><b>Newsletter (optional)</b></p>
+        <p class="muted small" style="margin:0 0 10px;">Link to a signup form to share plan updates and workshop dates.</p>
+        <a class="btn" href="#" onclick="alert('Replace this with your newsletter signup link.'); return false;">Newsletter Signup Link</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footgrid">
+      <div>
+        <b>2026 Housing Plan</b><br/>
+        <span class="small">City of East Point • OEIE</span>
+      </div>
+      <div class="small muted" style="text-align:right;">
+        Built as a lightweight public summary page. Replace placeholders with official links as materials are finalized.
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
